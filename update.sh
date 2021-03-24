@@ -30,6 +30,7 @@ for variant in apache fpm fpm-alpine; do
 	cp common.config.ini.php "$variant/common.config.ini.php"
 	cp php.ini "$variant/php.ini"
 	cp bootstrap.php "$variant/bootstrap.php"
+    cp www.conf.default "$variant/www.conf.default"
 	sed -ri -e '
 		s/%%VARIANT%%/'"$variant"'/;
 		s/%%VERSION%%/'"$latest"'/;
