@@ -82,6 +82,7 @@ RUN curl -fsSL -o geoip.gz \
 	rm geoip.gz
 
 COPY php.ini /usr/local/etc/php/conf.d/php-matomo.ini
+COPY www.conf.default /usr/local/etc/php-fpm.d/www.conf.default
 
 # https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases/
 #RUN set -ex; \
